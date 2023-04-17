@@ -1,0 +1,23 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.217.4/containers/debian
+{
+	"name": "Python Learning",
+	"build": {
+        "dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Debian version: bullseye, buster
+		// Use bullseye on local arm64/Apple Silicon.
+		"args": { "VARIANT": "bullseye" }
+	},
+	"customizations": {
+		"vscode": {
+		  "settings": {},
+		  "extensions": ["ms-python.python"]
+		}
+	  },
+	"containerUser": "vscode",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers-contrib/features/pylint:2": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	}
+}
